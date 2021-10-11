@@ -1,11 +1,10 @@
 #include <iostream>
-#include "minOperations_2033.h"
-
+#include "testhead.h"
 using namespace std;
 
+
 int main() {
-    minOperations_2033 mo;
-    cout << mo.test() << endl;
-    cout << "" << endl;
+    StockPrice sp;
+    sp.test();
     return 0;
 }
