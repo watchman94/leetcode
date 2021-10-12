@@ -2,9 +2,7 @@
 #include "testhead.h"
 using namespace std;
 
-
-int main() {
-    StockPrice sp;
-    sp.test();
+int main(){
+    testList();
     return 0;
 }
