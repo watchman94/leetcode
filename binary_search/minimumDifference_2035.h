@@ -16,7 +16,9 @@ public:
         int sum = accumulate(begin(nums), end(nums), 0);
         int n = nums.size() / 2;
         vector<vector<int>> left(n + 1), right(n + 1);
-        //O(pow(2, n) * n)
+        //fill value(fit the mask) in left and right, 2 method
+        //method 1: O(pow(2, n) * n)
+        /*
         for(int i = 1; i < (1 << n); i++){
             int s = 0, l = 0, r = 0;
             for(int j = 0; j < n; j++)
@@ -28,6 +30,13 @@ public:
             left[s].push_back(l);
             right[s].push_back(r);
         }
+        */
+        //method 2: O(pow(2, n))
+        vector<int> l(begin(nums), begin(nums) + n);
+        vector<int> r(begin(nums) + n, end(nums));
+        dfs(l, left, 0, 0, 0);
+        dfs(r, right, 0, 0, 0);
+
         //O(n * 6435 * log(6435)),  6435(the maximum size of right[i]) : combination 7 elements from 15 elements
         for(auto& r : right) sort(begin(r), end(r));
         int res = min(abs(sum - 2 * left[n][0]), abs(sum - 2 * right[n][0]));
@@ -46,6 +55,15 @@ public:
                 if(res == 0) return 0;
             }
         return res;
+    }
+
+    void dfs(const vector<int>& vec, vector<vector<int>>& res, int cnt, int i, int num){
+        if(i == vec.size()){
+            res[cnt].push_back(num);
+            return;
+        }
+        dfs(vec, res, cnt + 1, i + 1, num + vec[i]);
+        dfs(vec, res, cnt, i + 1, num);
     }
 
     void test(){
