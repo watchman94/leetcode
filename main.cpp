@@ -3,6 +3,7 @@
 using namespace std;
 
 int main(){
-    testList();
+    minimumDifference_2035 md;
+    md.test();
     return 0;
 }

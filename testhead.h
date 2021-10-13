@@ -6,6 +6,7 @@
 #include "minOperations_2033.h"
 #include "stockPrice_2034.h"
 #include "singleLinkList.h"
+#include "minimumDifference_2035.h"
 #define LEETCODE_TESTHEAD_H
 
 #endif //LEETCODE_TESTHEAD_H
