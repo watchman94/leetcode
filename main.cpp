@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    minimumDifference_2035 md;
-    md.test();
+    LargestIsland_827 li;
+    li.test();
     return 0;
 }
