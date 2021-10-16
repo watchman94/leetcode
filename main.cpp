@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    LargestIsland_827 li;
-    li.test();
+    UniqueLetterString_828 uls;
+    uls.test();
     return 0;
 }
