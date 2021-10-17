@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    UniqueLetterString_828 uls;
-    uls.test();
+    ConsecutiveNumbersSum_829 cns;
+    cns.test();
     return 0;
 }
