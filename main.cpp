@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    ConsecutiveNumbersSum_829 cns;
-    cns.test();
+    //List<int> l;
+    testList();
     return 0;
 }
