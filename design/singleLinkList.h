@@ -98,6 +98,7 @@ public:
         Node<T>* p = head;
         while(p && p->next && p->next->val != x) p = p->next;
         if(!p->next) return; //didn't find
+
         Node<T>* tmp = p->next;
         p->next = p->next->next;
         tmp->next = nullptr;
