@@ -1,5 +1,11 @@
+#include<iostream>
+#include<vector>
+#include<queue>
+using namespace std;
+
 int nBI(const vector<vector<int>>& edges, const vector<int>& pat){
   int n = pat.size();
+  int res = 0;
   vector<int> time(n, -1);
   time[0] = 0;
   vector<vector<int>> nei(n);
@@ -19,7 +25,6 @@ int nBI(const vector<vector<int>>& edges, const vector<int>& pat){
     }
    }
   }
-  int res = 0;
   for(int i = 1; i < n; i++){
    int num = (2 * time[i] - 1) / pat[i];
    int t0 = num * pat[i];
