@@ -4,6 +4,7 @@ using namespace std;
 
 int main(){
     //List<int> l;
-    testList();
+    PushDominoes pd;
+    pd.test();
     return 0;
 }

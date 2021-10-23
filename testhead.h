@@ -11,4 +11,5 @@
 #include "largestIsland_827.h"
 #include "uniqueLetterString_828.h"
 #include "math/consecutiveNumbersSum_829.h"
+#include "pushDominoes_838.h"
 #endif //LEETCODE_TESTHEAD_H
