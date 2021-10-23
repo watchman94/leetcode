@@ -13,6 +13,8 @@ using namespace std;
 class PushDominoes {
 public:
     string pushDominoes(string dominoes) {
+        /*
+         //method 1
         string res;
         using mp = pair<char, int>;
         vector<mp> vec;
@@ -39,6 +41,35 @@ public:
         int d = n - res.size();
         (vec.empty() || vec.back().first == 'L') ? res += string(d, '.') : res += string(d, 'R');
         return res;
+         */
+
+        //method 2
+        int j = -1;
+        int n = dominoes.size();
+        vector<int> vec(n);
+        for(int i = 0; i < n; i++){
+            if(dominoes[i] == 'R') j = i;
+            else if(dominoes[i] == 'L') j = -1;
+            if(j == -1) vec[i] = 1e5 + 1;
+            else vec[i] = i - j;
+        }
+        string res;
+        j = -1;
+        int d;
+        for(int i = n - 1; i >= 0; i--){
+            if(dominoes[i] == 'L') j = i;
+            else if(dominoes[i] == 'R') j = -1;
+            if(j == -1) d = 1e5 + 1;
+            else d = j - i;
+            if(d < vec[i]) res += "L";
+            else if(d > vec[i]) res += "R";
+            else res += ".";
+        }
+        reverse(begin(res), end(res));
+        return res;
+
+
+
     }
 
     void test(){
