@@ -39,7 +39,7 @@ public:
         ptr = sp.ptr;
         cnt = sp.cnt;
         sp.ptr = nullptr;
-        sp.cnt = 0;
+        //sp.cnt = 0;
     }
     SharedPtr& operator=(SharedPtr&& sp){
         if(ptr != sp.ptr){
@@ -47,12 +47,32 @@ public:
             ptr = sp.ptr;
             cnt = sp.cnt;
             sp.ptr = nullptr;
-            sp.cnt = 0;
+            //sp.cnt = 0;
         }
         return *this;
     }
     ~SharedPtr(){
         release();
+    }
+    operator bool(){
+        return ptr != nullptr;
+    }
+    T* operator->(){
+        return ptr;
+    }
+    T& operator*(){
+        return *ptr;
+    }
+    T* get(){
+        return ptr;
+    }
+    void reset(T* p = nullptr){
+        release();
+        ptr = p;
+        if(ptr) cnt = 1;
+    }
+    int use_count(){
+        return cnt;
     }
 };
 
