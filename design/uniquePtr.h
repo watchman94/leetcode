@@ -77,6 +77,14 @@ public:
 	}
 };
 
+//auto make_unique(Args&&... args){
+//UniquePtr<T> make_unique(Args&&... args){
+template<typename T, typename... Args>
+auto make_unique(Args&&... args){
+	return UniquePtr<T>(new T(std::forward<Args>(args)...));
+}
+
+
 void test(){
 	/*
 	UniquePtr<int> upr1(new int(1));
@@ -89,4 +97,10 @@ void test(){
 	UniquePtr<int, Deletor2> upr3(new int(2));
 	upr3 = move(upr2);
 	cout << *upr3 << endl;
+
+	auto upr4 = make_unique<int>(100);
+	cout << *upr4 << endl;
+	UniquePtr<int> upr5 = move(upr4);
+	cout << *upr5 << endl;
+
 }
