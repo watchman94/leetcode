@@ -2,5 +2,6 @@ cmake_minimum_required(VERSION 3.17)
 project(leetcode)
 set( CMAKE_BUILD_TYPE Debug )
 set(CMAKE_CXX_STANDARD 20)
-include_directories("./array/" "./design/" "./binary_search/" "./dfs/" "./math/" "./bfs/" "./string/" "./graph/" "./dp/" "./math/")
+include_directories("./array/" "./design/" "./binary_search/" "./dfs/"
+        "./math/" "./bfs/" "./string/" "./graph/" "./dp/" "./heap")
 add_executable(leetcode main.cpp testhead.h)

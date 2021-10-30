@@ -12,4 +12,6 @@
 #include "uniqueLetterString_828.h"
 #include "math/consecutiveNumbersSum_829.h"
 #include "pushDominoes_838.h"
+#include "minimumTime_2050.h"
+#include "splitIntoFibonacci_842.h"
 #endif //LEETCODE_TESTHEAD_H

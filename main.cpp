@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
     //List<int> l;
-    PushDominoes pd;
-    pd.test();
+    SplitIntoFibonacci sif;
+    sif.test();
     return 0;
 }
