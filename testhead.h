@@ -14,4 +14,5 @@
 #include "pushDominoes_838.h"
 #include "minimumTime_2050.h"
 #include "splitIntoFibonacci_842.h"
+#include "sharedPtr.h"
 #endif //LEETCODE_TESTHEAD_H

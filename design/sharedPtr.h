@@ -144,13 +144,13 @@ void test(){
 	cout << "sp5 use count: " << sp5.use_count() << endl;
 
 	
-	SharedPtr<int> sp6 = make_shared<int>(6);
+	SharedPtr<int> sp6 = ::make_shared<int>(6);
 	SharedPtr<int> sp7(sp6);
 	cout << "sp7 num: " << *sp7 << endl;
 	cout << "sp7 use count: " << sp7.use_count() << endl;
 
 		
-	SharedPtr<int> sp8 = make_shared<int>(8);
+	SharedPtr<int> sp8 = ::make_shared<int>(8);
 	sp8 = move(sp7);
 	//cout << "sp7 num: " << *sp7 << endl;
 	cout << "sp7 use count: " << sp7.use_count() << endl;
