@@ -15,5 +15,6 @@
 #include "minimumTime_2050.h"
 #include "splitIntoFibonacci_842.h"
 #include "sharedPtr.h"
-#include "checkPrime.h"
+#include "checkprime.h"
+#include "quickSort.h"
 #endif //LEETCODE_TESTHEAD_H

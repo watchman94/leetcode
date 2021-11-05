@@ -15,7 +15,7 @@ struct IsPrimeHelper<n1, 1>{
 //IsPrime class
 template<unsigned n>
 struct IsPrime{
-	static constexpr bool value = IsPrimeHelper<n, static_cast<unsigned>(sqrt(n))>::value;
+	static constexpr bool value = IsPrimeHelper<n, static_cast<unsigned>(n / 2)>::value;
 };
 
 template<>
@@ -42,11 +42,11 @@ constexpr bool isPrimeFunc(){
 	else if constexpr (n == 2) return true;
 	
 	int i = 2;
-	for(; i <= sqrt(n) && n % i; i++);
-	return i > sqrt(n);
+	for(; i <= n / 2 && n % i; i++);
+	return i > n / 2;
 }
 
-void test(){
+void checkPrime_test(){
 	static_assert(isPrimeValue<1> == false);	
 	static_assert(isPrimeValue<2> == true);	
 	static_assert(isPrimeValue<7> == true);	
