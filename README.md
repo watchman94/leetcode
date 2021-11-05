@@ -9,5 +9,5 @@
 ## 2. The others
 *some data structure is in "desgin" folder*
 
-*template meta programming is in "tmp" folder*
+*template meta programming is in "TMP" folder*
 
