@@ -7,6 +7,8 @@ int main(){
     //SplitIntoFibonacci sif;
     //sif.test();
     //test();
-    qsort_test();
+    //qsort_test();
+    ShiftingLetters sl;
+    sl.test();
     return 0;
 }
