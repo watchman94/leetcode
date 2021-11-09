@@ -18,4 +18,5 @@
 #include "checkprime.h"
 #include "quickSort.h"
 #include "shiftingLetters_848.h"
+#include "maximalPathQuality_2065.h"
 #endif //LEETCODE_TESTHEAD_H
