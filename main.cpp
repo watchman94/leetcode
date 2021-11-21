@@ -3,7 +3,8 @@
 using namespace std;
 
 int main(){
-    MaximalPathQuality mpq;
-    mpq.test();
+    //MaximalPathQuality mpq;
+    //mpq.test();
+    robot_test();
     return 0;
 }
