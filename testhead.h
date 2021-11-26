@@ -20,4 +20,5 @@
 #include "shiftingLetters_848.h"
 #include "maximalPathQuality_2065.h"
 #include "RobotII_2069.h"
+#include "kMirror_2081.h"
 #endif //LEETCODE_TESTHEAD_H

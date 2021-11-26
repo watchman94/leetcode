@@ -3,8 +3,6 @@
 using namespace std;
 
 int main(){
-    //MaximalPathQuality mpq;
-    //mpq.test();
-    robot_test();
+    kMirror_test();
     return 0;
 }
