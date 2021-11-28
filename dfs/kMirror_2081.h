@@ -66,7 +66,7 @@ public:
     }
 };
 
-int kMirror_test(){
+void kMirror_test(){
     KMirror t;
     assert(t.kMirror(3, 7) == 499);
     assert(t.kMirror(7, 17) == 20379000);
