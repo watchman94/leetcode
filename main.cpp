@@ -3,6 +3,7 @@
 using namespace std;
 
 int main(){
-    kMirror_test();
+    CountPyramids cp;
+    cp.test();
     return 0;
 }
