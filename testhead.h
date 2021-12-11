@@ -22,4 +22,5 @@
 #include "RobotII_2069.h"
 #include "kMirror_2081.h"
 #include "countPyramids_2088.h"
+#include "rectangleArea_850.h"
 #endif //LEETCODE_TESTHEAD_H

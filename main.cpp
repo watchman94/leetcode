@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    CountPyramids cp;
-    cp.test();
+    RectangleArea ra;
+    ra.test();
     return 0;
 }
