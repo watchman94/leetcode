@@ -23,4 +23,5 @@
 #include "kMirror_2081.h"
 #include "countPyramids_2088.h"
 #include "rectangleArea_850.h"
+#include "subArrayRanges_2104.h"
 #endif //LEETCODE_TESTHEAD_H

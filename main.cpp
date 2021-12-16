@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    RectangleArea ra;
-    ra.test();
+    SubArrayRanges sa;
+    sa.test();
     return 0;
 }

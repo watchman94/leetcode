@@ -5,10 +5,12 @@
 #ifndef LEETCODE_SUBARRAYRANGES_2104_H
 #define LEETCODE_SUBARRAYRANGES_2104_H
 #include<vector>
+#include<stack>
 using namespace std;
 class SubArrayRanges {
 public:
-    long long subArrayRanges(vector<int>& nums) {
+    long long subArrayRanges(const vector<int>& nums) {
+        /*
         using ll = long long;
         ll res = 0;
         int n = nums.size();
@@ -21,6 +23,42 @@ public:
             }
         }
         return res;
+        */
+        using ll = long long;
+        ll res = 0;
+        int n = nums.size();
+        stack<int> st;
+        vector<ll> vec(n);
+        for(int i = 0; i < n; i++){
+            while(!st.empty() && nums[st.top()] > nums[i]) st.pop();
+            vec[i] = st.empty() ? i + 1 : i - st.top();
+            st.push(i);
+        }
+        st = stack<int>();
+        for(int i = n - 1; i >= 0; i--){
+            while(!st.empty() && nums[st.top()] >= nums[i]) st.pop();
+            ll tmp = st.empty() ? n - i : st.top() - i;
+            res -= nums[i] * (tmp * vec[i]);
+            st.push(i);
+        }
+        st = stack<int>();
+        for(int i = 0; i < n; i++){
+            while(!st.empty() && nums[st.top()] < nums[i]) st.pop();
+            vec[i] = st.empty() ? i + 1 : i - st.top();
+            st.push(i);
+        }
+        st = stack<int>();
+        for(int i = n - 1; i >= 0; i--){
+            while(!st.empty() && nums[st.top()] <= nums[i]) st.pop();
+            ll tmp = st.empty() ? n - i : st.top() - i;
+            res += nums[i] * (tmp * vec[i]);
+            st.push(i);
+        }
+        return res;
+    }
+
+    void test(){
+        auto res = subArrayRanges({1,3,3});
     }
 };
 
