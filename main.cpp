@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    SubArrayRanges sa;
-    sa.test();
+    MinimumRefill mr;
+    mr.test();
     return 0;
 }
