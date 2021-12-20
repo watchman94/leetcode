@@ -25,4 +25,5 @@
 #include "rectangleArea_850.h"
 #include "subArrayRanges_2104.h"
 #include "minimumRefill_2105.h"
+#include "maxTotalFruits_2106.h"
 #endif //LEETCODE_TESTHEAD_H

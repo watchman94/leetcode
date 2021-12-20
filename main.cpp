@@ -3,7 +3,6 @@
 using namespace std;
 
 int main(){
-    MinimumRefill mr;
-    mr.test();
+    MaxTotalFruits mtf;
     return 0;
 }
